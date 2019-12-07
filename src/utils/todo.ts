@@ -14,7 +14,7 @@ const Todo = {
   getFiles ( folderPath ) {
 
     const config = Config.get (),
-          {extensions} = vscode.extensions.getExtension ( 'fabiospampinato.vscode-todo-plus' ).packageJSON.contributes.languages[0],
+          {extensions} = vscode.extensions.getExtension ( 'mdw.vscode-todo-plus-plus' ).packageJSON.contributes.languages[0],
           files = _.uniq ([ config.file.name, ...extensions ]);
 
     return files.map ( file => path.join ( folderPath, file ) );

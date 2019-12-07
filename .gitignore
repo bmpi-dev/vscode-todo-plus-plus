@@ -41,3 +41,4 @@ coverage
 typings
 out
 .vscode-test
+.metals/

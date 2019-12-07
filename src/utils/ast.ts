@@ -77,7 +77,7 @@ const AST = {
 
       const line = textDocument.lineAt ( nextLine );
 
-      if ( skipEmptyLines && ( !line.text || Consts.regexes.empty.test ( line.text ) ) ) {
+      if ( skipEmptyLines && ( !line.text || Consts.regexes.empty.test ( line.text ) ) || line.text.trim().startsWith("> ") ) {
         nextLine += direction;
         continue;
       }
@@ -119,6 +119,20 @@ const AST = {
       if ( level <= startLevel ) return false;
 
       if ( level > ( startLevel + 1 ) ) return;
+
+      callback.apply ( undefined, arguments );
+
+    });
+
+  },
+
+  walkChildren2 ( textDocument: vscode.TextDocument, lineNr: number, callback: Function ) {
+
+    return AST.walkDown ( textDocument, lineNr, true, false, function ({ startLine, startLevel, line, level }) {
+
+      if ( level <= startLevel ) return false;
+
+      // if ( level > ( startLevel + 1 ) ) return;
 
       callback.apply ( undefined, arguments );
 

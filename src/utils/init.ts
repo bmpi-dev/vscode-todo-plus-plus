@@ -13,7 +13,7 @@ const Init = {
 
   commands ( context: vscode.ExtensionContext ) {
 
-    const {commands} = vscode.extensions.getExtension ( 'fabiospampinato.vscode-todo-plus' ).packageJSON.contributes;
+    const {commands} = vscode.extensions.getExtension ( 'mdw.vscode-todo-plus-plus' ).packageJSON.contributes;
 
     commands.forEach ( ({ command, title }) => {
 

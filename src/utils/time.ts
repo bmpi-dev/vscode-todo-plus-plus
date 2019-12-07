@@ -121,10 +121,11 @@ const Time = {
       toDate = new Date ( to );
 
     } else {
-
+     // @ts-ignore
       to = to.replace ( / and /gi, ' ' );
+      // @ts-ignore
       to = to.replace ( /(\d)(ms|s|m|h|d|w|y)(\d)/gi, '$1$2 $3' );
-
+      // @ts-ignore
       if ( /^\s*\d+\s*$/.test ( to ) ) return 0;
 
       const sugar = require ( 'sugar-date' ); //TSC // Lazy import for performance
