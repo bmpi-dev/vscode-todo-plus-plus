@@ -3,7 +3,7 @@
   "displayName": "Todo++",
   "description": "Manage todo lists with ease. Powerful, easy to use and customizable.",
   "icon": "resources/logo/logo-128x128.png",
-  "version": "4.14.1",
+  "version": "4.14.2",
   "license": "MIT",
   "main": "out/extension.js",
   "publisher": "mdw",
@@ -1015,7 +1015,7 @@
     "watch": "tsc -watch -p ./"
   },
   "bugs": {
-    "url": "https://github.com/fabiospampinato/vscode-todo-plus/issues"
+    "url": "https://github.com/bmpi-dev/vscode-todo-plus-plus/issues"
   },
   "author": {
     "name": "Fabio Spampinato",
@@ -1023,7 +1023,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fabiospampinato/vscode-todo-plus.git"
+    "url": "https://github.com/bmpi-dev/vscode-todo-plus-plus"
   },
   "engines": {
     "vscode": "^1.25.0"
