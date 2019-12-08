@@ -14,6 +14,7 @@ import Utils from './utils';
 import ViewEmbedded from './views/embedded';
 import ViewFiles from './views/files';
 import DoingFiles from './views/doing';
+import CriticalFiles from './views/critical';
 
 /* CALL TODOS METHOD */
 
@@ -212,7 +213,12 @@ function viewRevealTodo ( todo: ItemTodo ) {
 
 /* DOING File */
 function refreshDoingEntry () {
-DoingFiles.refresh ( true );
+  DoingFiles.refresh ( true );
+}
+
+/* CRITICAL File */
+function refreshCriticalEntry () {
+  CriticalFiles.refresh ( true );
 }
 
 /* VIEW FILE */
@@ -289,5 +295,5 @@ function viewEmbeddedShowActiveFile () {
 
 /* EXPORT */
 
-export {open, openEmbedded, toggleBox, toggleDone, toggleCancelled, toggleStart, toggleTimer, archive, viewOpenFile, viewRevealTodo, viewFilesOpen, viewFilesCollapse, viewFilesExpand, viewEmbeddedCollapse, viewEmbeddedExpand, viewEmbeddedFilter, embeddedFilter, viewEmbeddedClearFilter, embeddedClearFilter, viewEmbeddedToggleAllFiles, viewEmbeddedShowAllFiles, viewEmbeddedShowActiveFile, refreshDoingEntry};
+export {open, openEmbedded, toggleBox, toggleDone, toggleCancelled, toggleStart, toggleTimer, archive, viewOpenFile, viewRevealTodo, viewFilesOpen, viewFilesCollapse, viewFilesExpand, viewEmbeddedCollapse, viewEmbeddedExpand, viewEmbeddedFilter, embeddedFilter, viewEmbeddedClearFilter, embeddedClearFilter, viewEmbeddedToggleAllFiles, viewEmbeddedShowAllFiles, viewEmbeddedShowActiveFile, refreshDoingEntry, refreshCriticalEntry};
 export {toggleBox as editorToggleBox, toggleDone as editorToggleDone, toggleCancelled as editorToggleCancelled, toggleStart as editorToggleStart, archive as editorArchive}

@@ -3,7 +3,7 @@
   "displayName": "Todo++",
   "description": "Manage todo lists with ease. Powerful, easy to use and customizable.",
   "icon": "resources/logo/logo-128x128.png",
-  "version": "4.14.2",
+  "version": "4.14.3",
   "license": "MIT",
   "main": "out/extension.js",
   "publisher": "mdw",
@@ -628,6 +628,14 @@
         }
       },
       {
+        "command": "todo.refreshCriticalEntry",
+        "title": "Refresh",
+        "icon": {
+          "light": "resources/icons/refresh_light.svg",
+          "dark": "resources/dark/refresh_dark.svg"
+        }
+      },
+      {
         "command": "todo.open",
         "title": "Todo: Open"
       },
@@ -813,6 +821,10 @@
           "name": "Doing"
         },
         {
+          "id": "todo.views.3critical",
+          "name": "Critical"
+        },
+        {
           "id": "todo.views.1files",
           "name": "Files"
         },
@@ -949,6 +961,11 @@
         {
           "command": "todo.refreshDoingEntry",
           "when": "view == todo.views.0doing",
+          "group": "navigation@0"
+        },
+        {
+          "command": "todo.refreshCriticalEntry",
+          "when": "view == todo.views.3critical",
           "group": "navigation@0"
         },
         {
