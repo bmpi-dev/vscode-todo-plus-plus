@@ -1,5 +1,10 @@
 # Todo+
 
+## !!!UPDATE!!!
+This is a copy from [fabiospampinato/vscode-todo-plus](https://github.com/fabiospampinato/vscode-todo-plus), I modify it for myself use. Below is my change:
+1. Add DOING window in treeview. This helps me focus on what I'm doing.
+2. Add CRITICAL window in treeview. This helps remind me of things that are important but haven't started.
+---
 <p align="center">
   <img src="https://raw.githubusercontent.com/fabiospampinato/vscode-todo-plus/master/resources/logo/logo.png" width="128" alt="Logo">
 </p>
